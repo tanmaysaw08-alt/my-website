@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="center">
+    <div class="success-box">
+        <div class="check">✓</div>
+        <h1>Submitted Successfully!</h1>
+        <p>Thank you, {{ name }}. Your information has been received.</p>
+        <a class="button" href="/">Back to Website</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">ADMIN DASHBOARD</div>
+    <div class="nav-links">
+        <a href="/">Website</a>
+        <a href="/admin">Logout</a>
+    </div>
+</nav>
+
+<section class="dashboard">
+    <p class="label">PRIVATE DASHBOARD</p>
+    <h1>Form Submissions</h1>
+    <p class="description">Information submitted by website visitors.</p>
+
+    <div class="table-wrap">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Date</th>
+            </tr>
+            {% for row in submissions %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.phone }}</td>
+                <td>{{ row.email }}</td>
+                <td>{{ row.message }}</td>
+                <td>{{ row.created_at }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6">No submissions yet.</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
+
+</body>
+</html>

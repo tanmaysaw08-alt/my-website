@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="center">
+    <div class="login-box">
+        <p class="label">PRIVATE</p>
+        <h1>Admin Login</h1>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter admin password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="/">← Back to website</a>
+    </div>
+</body>
+</html>
