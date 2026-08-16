@@ -4,18 +4,12 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>INFO App</title>
 
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='style.css') }}"
-    >
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -32,9 +26,9 @@
 
         <a href="#about">About</a>
 
-        <a href="#form">Form</a>
-
         <a href="#study">Study</a>
+
+        <a href="#form">Form</a>
 
         <a href="#contact">Contact</a>
 
@@ -65,11 +59,8 @@
             can submit their information easily and securely.
         </p>
 
-        <a
-            class="button"
-            href="#form"
-        >
-            Get Started
+        <a class="button" href="#study">
+            Explore App
         </a>
 
     </div>
@@ -90,31 +81,22 @@
     </h2>
 
     <p class="description">
-
         INFO App is a test application built and developed by
         <strong>TANMAY SAW</strong>.
+    </p>
 
+    <p class="description">
         This app is currently under testing and development.
-
     </p>
 
     <p class="description">
-
-        The application is designed to provide a simple and
-        modern experience for collecting visitor information.
-
-    </p>
-
-    <p class="description">
-
         Built using HTML, CSS, JavaScript and Python Flask.
-
     </p>
 
 </section>
 
 
-<!-- STUDY MATERIAL -->
+<!-- BCA STUDY -->
 
 <section id="study" class="section">
 
@@ -127,22 +109,16 @@
     </h2>
 
     <p class="description">
-
-        Explore computer topics and important questions
-        for BCA First Semester.
-
+        Computer topics and important questions for
+        BCA First Semester students.
     </p>
 
     <p class="description">
-
         Shri Shankaracharya Professional University, Bhilai
-
     </p>
 
-    <a
-        class="button"
-        href="/bca-first-semester"
-    >
+    <a class="button"
+       href="/bca-first-semester">
         Open BCA First Semester
     </a>
 
@@ -163,14 +139,9 @@
             Submit Your Information
         </h2>
 
-        <form
-            action="/submit"
-            method="POST"
-        >
+        <form action="/submit" method="POST">
 
-            <label>
-                Name *
-            </label>
+            <label>Name *</label>
 
             <input
                 type="text"
@@ -180,9 +151,7 @@
             >
 
 
-            <label>
-                Phone *
-            </label>
+            <label>Phone *</label>
 
             <input
                 type="tel"
@@ -192,9 +161,7 @@
             >
 
 
-            <label>
-                Email
-            </label>
+            <label>Email</label>
 
             <input
                 type="email"
@@ -203,9 +170,7 @@
             >
 
 
-            <label>
-                Message
-            </label>
+            <label>Message</label>
 
             <textarea
                 name="message"
@@ -224,7 +189,7 @@
 </section>
 
 
-<!-- CONTACT ME -->
+<!-- CONTACT -->
 
 <section id="contact" class="section">
 
@@ -237,46 +202,32 @@
     </h2>
 
     <p class="description">
-
-        If you want to contact me, you can use any of
-        the options below.
-
+        You can contact me using the options below.
     </p>
 
 
     <div class="contact-info">
 
         <p>
-
-            <strong>
-                Phone:
-            </strong>
+            <strong>Phone:</strong>
 
             <a href="tel:6266855676">
                 6266855676
             </a>
-
         </p>
 
 
         <p>
-
-            <strong>
-                Email:
-            </strong>
+            <strong>Email:</strong>
 
             <a href="mailto:tanmaysaw08@gmail.com">
                 tanmaysaw08@gmail.com
             </a>
-
         </p>
 
 
         <p>
-
-            <strong>
-                Instagram:
-            </strong>
+            <strong>Instagram:</strong>
 
             <a
                 href="https://www.instagram.com/_tanmay_saw_02/"
@@ -285,7 +236,6 @@
             >
                 @_tanmay_saw_02
             </a>
-
         </p>
 
     </div>
@@ -298,11 +248,7 @@
 <footer>
 
     <span>
-
-        © 2026 INFO App •
-        Built by TANMAY SAW •
-        Test Version
-
+        © 2026 INFO App • Built by TANMAY SAW • Test Version
     </span>
 
     <a href="/admin">
@@ -312,9 +258,7 @@
 </footer>
 
 
-<script
-    src="{{ url_for('static', filename='script.js') }}"
-></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 
