@@ -38,8 +38,8 @@ def bca_first_semester():
 @app.route("/submit", methods=["POST"])
 def submit():
 
-    name = request.form["name"].strip()
-    phone = request.form["phone"].strip()
+    name = request.form.get("name", "").strip()
+    phone = request.form.get("phone", "").strip()
     email = request.form.get("email", "").strip()
     message = request.form.get("message", "").strip()
 
@@ -60,7 +60,10 @@ def submit():
     conn.commit()
     conn.close()
 
-    return render_template("success.html", name=name)
+    return render_template(
+        "success.html",
+        name=name
+    )
 
 
 @app.route("/admin", methods=["GET", "POST"])
@@ -68,7 +71,9 @@ def admin():
 
     if request.method == "POST":
 
-        if request.form.get("password") != "1234":
+        password = request.form.get("password", "")
+
+        if password != "1234":
             return render_template(
                 "admin.html",
                 error="Wrong password"
@@ -77,7 +82,7 @@ def admin():
         conn = sqlite3.connect(DATABASE)
         conn.row_factory = sqlite3.Row
 
-        data = conn.execute(
+        submissions = conn.execute(
             "SELECT * FROM submissions ORDER BY id DESC"
         ).fetchall()
 
@@ -85,7 +90,7 @@ def admin():
 
         return render_template(
             "dashboard.html",
-            submissions=data
+            submissions=submissions
         )
 
     return render_template("admin.html")
