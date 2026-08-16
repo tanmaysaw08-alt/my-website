@@ -1,4 +1,4 @@
-```python
+```text
 from flask import Flask, render_template, request
 import sqlite3
 
@@ -37,7 +37,6 @@ def bca_first_semester():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-
     name = request.form.get("name", "").strip()
     phone = request.form.get("phone", "").strip()
     email = request.form.get("email", "").strip()
@@ -60,17 +59,12 @@ def submit():
     conn.commit()
     conn.close()
 
-    return render_template(
-        "success.html",
-        name=name
-    )
+    return render_template("success.html", name=name)
 
 
 @app.route("/admin", methods=["GET", "POST"])
 def admin():
-
     if request.method == "POST":
-
         password = request.form.get("password", "")
 
         if password != "1234":
