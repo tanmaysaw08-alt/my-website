@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +7,10 @@
 
     <title>INFO App</title>
 
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
 </head>
 
 <body>
@@ -55,8 +56,8 @@
         </h1>
 
         <p class="hero-text">
-            INFO App is a simple digital platform where visitors
-            can submit their information easily and securely.
+            INFO App is a test application built and developed
+            by Tanmay Saw.
         </p>
 
         <a class="button" href="#study">
@@ -86,7 +87,7 @@
     </p>
 
     <p class="description">
-        This app is currently under testing and development.
+        This application is currently under testing and development.
     </p>
 
     <p class="description">
@@ -96,7 +97,7 @@
 </section>
 
 
-<!-- BCA STUDY -->
+<!-- BCA STUDY SECTION -->
 
 <section id="study" class="section">
 
@@ -117,8 +118,10 @@
         Shri Shankaracharya Professional University, Bhilai
     </p>
 
-    <a class="button"
-       href="/bca-first-semester">
+    <a
+        class="button"
+        href="/bca-first-semester"
+    >
         Open BCA First Semester
     </a>
 
@@ -141,7 +144,9 @@
 
         <form action="/submit" method="POST">
 
-            <label>Name *</label>
+            <label>
+                Name *
+            </label>
 
             <input
                 type="text"
@@ -151,7 +156,9 @@
             >
 
 
-            <label>Phone *</label>
+            <label>
+                Phone *
+            </label>
 
             <input
                 type="tel"
@@ -161,7 +168,9 @@
             >
 
 
-            <label>Email</label>
+            <label>
+                Email
+            </label>
 
             <input
                 type="email"
@@ -170,7 +179,9 @@
             >
 
 
-            <label>Message</label>
+            <label>
+                Message
+            </label>
 
             <textarea
                 name="message"
@@ -258,9 +269,10 @@
 </footer>
 
 
-<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
 
 </body>
 
 </html>
-
